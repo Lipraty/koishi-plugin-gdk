@@ -1,8 +1,8 @@
-# koishi-plugin-genshinkit
+# koishi-plugin-gdk
 
 [![npm](https://img.shields.io/npm/v/koishi-plugin-genshinkit?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-genshinkit)
 
-给 Genshin 系列插件开发者的开箱即用的开发大礼包，用于 Koishi 插件的通用原神开发套件。
+Genshin Development Kit: 用于 Koishi 插件的通用原神基础开发套件。
 
 ## 功能
 
