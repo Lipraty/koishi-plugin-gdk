@@ -1,0 +1,22 @@
+commands:
+  genshin:
+    description: 原神
+    uid:
+      description: 绑定一个 uid
+      option:
+        bind: 绑定 uid
+        append: 添加这个 uid
+        remove: 移除这个 uid
+        default: 将该 uid 设置为默认 uid
+      messages:
+        saved: uid({0}) 绑定成功！
+        added: "添加成功，你目前已绑定以下 uid: "
+        removed: 该 uid 已取消绑定
+    cookie:
+      description: 为 uid 绑定 cookie (不指定 uid 的情况下，绑定默认 uid)
+      option:
+        bind: 绑定 cookie
+        remove: 移除 cookie
+      messages:
+        saved: Cookie 绑定成功！
+        removed: 该 cookie 已取消绑定
