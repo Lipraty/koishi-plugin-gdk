@@ -1,8 +1,8 @@
 {
-  "name": "koishi-plugin-genshinkit",
+  "name": "koishi-plugin-gdk",
   "description": "Universal Genshin development kit for Koishi plugins",
   "version": "1.0.0-alpha.0",
-  "repository": "https://github.com/Lipraty/koishi-plugin-genshinkit",
+  "repository": "https://github.com/Lipraty/koishi-plugin-gdk",
   "author": "Lipraty <i@lonay.me>",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -12,8 +12,8 @@
   ],
   "koishi": {
     "description": {
-      "zh": "🪄🛠️ 用于 Koishi 插件的通用原神开发套件，例如标准 API 请求、抽卡基础算法、Enka 数据序列化等",
-      "en": "🪄🛠️ Universal Genshin development kit for Koishi plugins"
+      "zh": "✨🛠️ 用于 Koishi 插件的通用原神开发套件，例如标准 API 请求、抽卡基础算法、Enka 数据序列化等",
+      "en": "✨🛠️ Universal Genshin development kit for Koishi plugins"
     },
     "service": {
       "optional": [
@@ -37,6 +37,7 @@
     "genshin",
     "develop",
     "yuanshen",
+    "gdk",
     "原神",
     "开发"
   ],
@@ -44,6 +45,6 @@
     "koishi": "^4.11.8"
   },
   "peerDependencies": {
-    "koishi": "^4.10.0"
+    "koishi": "^4.11.0"
   }
 }
