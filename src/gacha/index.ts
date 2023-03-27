@@ -1,1 +1,1 @@
-export * from './gachaCore'
+export * from './core'

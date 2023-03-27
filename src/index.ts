@@ -1,13 +1,32 @@
 import { Context, Schema, Service } from 'koishi'
+import GenshinCommand from './core/command'
 
-class GenshinKit extends Service {
-  constructor(app: Context, config: GenshinKit.Config){
-    super(app, 'genshinkit', true)
+declare module 'koishi' {
+  interface Context {
+    genshin: GDK
   }
 }
 
-namespace GenshinKit {
-  export interface Config { }
+class GDK extends Service {
+  constructor(app: Context, config: GDK.BasicConfig) {
+    super(app, 'gdk', true)
+    app.plugin(GenshinCommand, config)
+  }
 
-  export const Config: Schema<Config> = Schema.object({})
+  cname: string = GenshinCommand.cname
 }
+
+namespace GDK {
+  export interface BasicConfig { }
+  export const BasicConfig: Schema<BasicConfig> = Schema.object({})
+
+  export type Config = BasicConfig & GenshinCommand.Config
+  export const Config: Schema<Config> = Schema.intersect([
+    BasicConfig,
+    Schema.union([
+      GenshinCommand.Config
+    ])
+  ])
+}
+
+export default GDK

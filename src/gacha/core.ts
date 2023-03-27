@@ -1,4 +1,6 @@
-type GachaLevel = 'S' | 'R' | 'N'
+import { Keys } from "koishi"
+
+export type GachaLevel = 'S' | 'R' | 'N'
 
 const probability = {
     activity: [151, 1282, 8567],
@@ -6,7 +8,9 @@ const probability = {
     permanent: [213, 1387, 8400]
 } as const
 
-export function gachaSelect(pool: keyof typeof probability) {
+export type GachaPool = Keys<typeof probability>
+
+export function gachaSelect(pool: GachaPool) {
     const hit = Math.ceil(Math.random() * 10000 + 1)
     const _p = probability[pool]
     const _c: GachaLevel[] = ['S', 'R', 'N']
