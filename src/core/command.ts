@@ -20,7 +20,6 @@ class GenshinCommand {
         ctx.i18n.define('zh', require('../locales/zh'))
 
         const namer = GenshinCommand.cname
-        ctx.command('genshin').action(async ({ session }) => { session.execute('genshin -h') })
 
         ctx.command(`${namer}.uid <uid:UID>`)
             .option('bind', '-b')

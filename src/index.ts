@@ -3,20 +3,21 @@ import GenshinCommand from './core/command'
 
 declare module 'koishi' {
   interface Context {
-    genshin: GDK
+    genshin: Genshin
   }
 }
 
-class GDK extends Service {
-  constructor(app: Context, config: GDK.BasicConfig) {
-    super(app, 'gdk', true)
+class Genshin extends Service {
+  constructor(app: Context, config: Genshin.BasicConfig) {
+    super(app, 'genshin', true)
+    app.command('genshin').action(async ({ session }) => { session.execute('genshin -h') })
     app.plugin(GenshinCommand, config)
   }
 
   cname: string = GenshinCommand.cname
 }
 
-namespace GDK {
+namespace Genshin {
   export interface BasicConfig { }
   export const BasicConfig: Schema<BasicConfig> = Schema.object({})
 
@@ -29,4 +30,4 @@ namespace GDK {
   ])
 }
 
-export default GDK
+export default Genshin
