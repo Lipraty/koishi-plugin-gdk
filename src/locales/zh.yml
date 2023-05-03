@@ -6,9 +6,9 @@ commands:
       option:
         list: 列出已绑定的 uid
         bind: 绑定 uid
-        user: 授权一位用户可以以你的默认 uid 进行操作
+        user: 授权一位用户可以使用你绑定的 uid 进行操作
         append: 添加这个 uid
-        remove: 移除这个 uid
+        remove: 移除这个 uid （组合使用`-ru @user`则移除该用户的授权）
         device: 重置该 uid 的虚拟设备信息（仅用于尝试解除验证码风控）
         default: 将该 uid 设置为默认 uid
       messages:
@@ -17,7 +17,7 @@ commands:
         fail-unbind: 这个 uid 还没有被绑定过，回复句号以绑定这个 uid
         fail-lackuid: 你应该指定一个 uid 以绑定，请回复该 uid
         fail-notuid: 这不是一个正确的 uid
-        fail-notdot: 请回复句号
+        fail-dot: 请回复句号
         list: 当前用户已绑定的 uid 有<br/>
         list-def: （默认）
         bind-def: 已设置 {0} 为默认 uid
