@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-gdk",
   "description": "Universal Genshin development kit for Koishi plugins",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.3",
   "repository": "https://github.com/Lipraty/koishi-plugin-gdk",
   "author": "Lipraty <i@lonay.me>",
   "main": "lib/index.js",
@@ -42,7 +42,7 @@
     "开发"
   ],
   "devDependencies": {
-    "koishi": "^4.11.8"
+    "koishi": "^4.12.4"
   },
   "peerDependencies": {
     "koishi": "^4.11.0"

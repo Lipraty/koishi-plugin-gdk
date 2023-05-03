@@ -1,4 +1,5 @@
 import { Context } from "koishi";
+import {} from '@koishijs/plugin-adapter-onebot'
 
 
 export default class GenshinTemplate {
